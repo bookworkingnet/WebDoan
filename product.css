@@ -1,0 +1,159 @@
+/* Đảm bảo không có khoảng cách và padding mặc định */
+body, header, .logo, .title, .navigation {
+    margin: 0;
+    padding: 0;
+}
+/* Đặt header là một khối chứa logo và tiêu đề */
+.background{
+    display: flex; /* Sử dụng Flexbox để sắp xếp các phần tử trong hàng ngang */
+    align-items: center; /* Căn giữa các phần tử theo chiều dọc */
+    padding-left: 40px; /* Khoảng cách giữa logo và lề màn hình bên trái */
+    justify-content: space-between; /* Căn tiêu đề về phía giữa ngang theo hàng */
+    background-image: url('./Pictures/z4790140534588_83d30b1d887cf57088860a6192e138ef.jpg '); /* Thay 'link_den_anh_nen.jpg' bằng đường dẫn ảnh nền thực tế */
+    background-size: cover;
+    background-position: center;
+}
+.logo {
+    display: flex; /* Sử dụng flexbox để căn giữa logo và tiêu đề theo chiều ngang */
+    align-items: center; /* Căn giữa theo chiều ngang */
+}
+/* Thiết lập kích thước cho logo */
+.logo img {
+    width: 150px; /* Kích thước của logo */
+    height: auto; /* Đảm bảo tỷ lệ khung hình không bị thay đổi */
+    margin-right: 10px; /* Khoảng cách giữa logo và tiêu đề */
+}
+
+.title {
+    font-size: 38px; /* Kích thước của tiêu đề H1 */
+    text-align: center; /* Căn giữa tiêu đề theo chiều ngang */
+    flex-grow: 1; /* Mở rộng tiêu đề để lấp đầy khoảng trống còn lại trong header */
+    color: #ffffff;
+	font-family: "UTM Banque";
+
+}
+/* Thiết lập thanh điều hướng */
+.navigation {
+    background-color: #011946; /* Màu nền của thanh điều hướng */
+    color: #fff; /* Màu chữ cho các liên kết */
+    text-align: center; /* Căn giữa các mục của thanh điều hướng ngang theo hàng */
+    display: block; /* Hiển thị thanh điều hướng như một khối */
+    clear: both; /* Đảm bảo rằng thanh điều hướng sẽ nằm dưới logo và tiêu đề */
+    padding: 1px 0; /* Khoảng cách giữa chữ và viền xung quanh */
+}
+
+.navigation ul {
+    list-style: none;
+    display: flex;
+    justify-content: center; /* Căn giữa các mục của thanh điều hướng ngang theo hàng */
+}
+
+.navigation li {
+    margin: 0 60px; /* Khoảng cách giữa các mục trong thanh điều hướng */
+}
+
+.navigation a {
+    text-decoration: none;
+    color: #fff; /* Màu chữ cho các liên kết */
+    font-weight: bold;
+	font-family: '#9Slide03 IcielSamsung Sharp Bo'
+}
+.navigation a:hover {
+    background-color: transparent; /* Loại bỏ màu nền khi di chuột vào */
+    color: #FFF586; /* Màu chữ khi di chuột vào */
+    font-weight: bold; /* Tạo đậm chữ khi di chuột vào */
+    border: 5px #3d3d3d; /* Thêm viền xung quanh chữ với màu xám */
+    border-radius: 5px; /* Bo góc chữ */
+    transition: border 0.3s, color 0.3s, font-weight 0.3s; /* Hiệu ứng chuyển đổi màu, font-weight và border trong 0.3 giây */
+}
+.image-container {
+    text-align: center;
+    margin: 20px 0; /* Khoảng cách giữa thanh điều hướng và bức ảnh */
+    padding: 20px;
+}
+.caption p{
+    text-align: center;
+    font-size: 40px;
+	font-family: '#9Slide03 IcielSamsung Sharp Bo';
+    margin: 20px 0;
+    padding-left: 1px;
+}
+.image-wrapper {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr); /* 3 cột có chiều rộng bằng nhau */
+    gap: 0px; /* Khoảng cách giữa các ảnh */
+}
+
+.image {
+    text-align: center; /* Căn giữa nội dung trong div */
+    margin: 20px 0;
+	font-family: '#9Slide03 IcielSamsung Sharp Bo';
+	font-size: 20px;
+}
+.image-description
+{
+    margin-top: 20px;
+}
+.image img {
+    width: 320px; /* Đảm bảo ảnh lấp đầy khoảng trống trong div */
+    height: 230px; /* Tự động tính chiều cao để không bị méo ảnh */
+    margin: 0 20px;
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Thêm hiệu ứng transition */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng */
+}
+.image img:hover {
+    transform: scale(1.1); /* Phóng to ảnh */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.5); /* Đổ bóng */
+}
+.button-container {
+    text-align: center;
+    margin: 20px 0;
+    position: relative;
+}
+
+.view-more-button {
+    padding: 10px 20px;
+    font-size: 18px;
+	font-style: none;
+    background-color: #f4c356; /* Màu tím nhạt */
+    font-family: '#9Slide03 IcielSamsung Sharp Bo';
+	color: #011946; /* Màu chữ trắng */
+    border: none;
+    border-radius: 20px; /* Bo tròn các cạnh */
+    transition: transform 0.2s ease, box-shadow 0.2s ease; /* Thêm hiệu ứng transition */
+    box-shadow: 0 5px 10px rgba(0, 0, 0, 0.1); /* Thêm bóng */
+}
+
+/* Hiệu ứng khi di chuột vào nút "Xem thêm" */
+.view-more-button:hover {
+    transform: scale(1.05); /* Phóng to nút */
+    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.2); /* Hiệu ứng bóng đổ */
+}
+footer {
+    background-color: #011946; /* Màu nền của footer */
+    color: #fff; /* Màu chữ trắng */
+    text-align: center;
+    padding: 5px;
+    position: relative; /* Đặt vị trí cho phần footer để chứa logo */
+}
+
+.footer-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+/* Định vị logo ở góc trái */
+.footer-logo {
+    position: absolute;
+    top: 50%; /* Đưa logo lên giữa theo chiều dọc */
+    left: 20px; /* Điều chỉnh khoảng cách từ lề trái */
+    transform: translate(0, -50%); /* Điều chỉnh để căn giữa */
+    width: 45px; /* Điều chỉnh kích thước của logo theo mong muốn */
+    height: 50px;
+}
+/* Đặt màu chữ và đường kẻ dưới cho các liên kết trong footer (nếu có) */
+footer a {
+    color: #fff;
+    text-decoration: none;
+    border-bottom: 1px solid #fff;
+}
